@@ -48,7 +48,6 @@ class App extends Component {
     } else {
       prompt("can't retreive your location coordination");
     }
-    console.log(this.state.coords.latitude);
   }
 
   // fetch current weather data from open weather API
