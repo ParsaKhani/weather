@@ -34,31 +34,34 @@ class App extends Component {
 
   // getting coordiantions by geolocation API
 
-  componentDidMount() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(position => {
-        const { latitude, longitude } = position.coords;
-        this.setState({
-          coords: {
-            latitude,
-            longitude
-          }
-        });
-      });
-    } else {
-      prompt("can't retreive your location coordination");
-    }
-  }
+  // componentDidMount() {
+  //   if (navigator.geolocation) {
+  //     navigator.geolocation.getCurrentPosition(position => {
+  //       const { latitude, longitude } = position.coords;
+  //       this.setState({
+  //         coords: {
+  //           latitude,
+  //           longitude
+  //         }
+  //       });
+  //     });
+  //   } else {
+  //     prompt("can't retreive your location coordination");
+  //   }
+  // }
 
   // fetch current weather data from open weather API
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.coords.latitude !== this.state.coords.latitude) {
-      this.fetchCurrentWeather();
-      this.fetchHourlyforecast();
-    }
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevState.coords.latitude !== this.state.coords.latitude) {
+  //     this.fetchCurrentWeather();
+  //     this.fetchHourlyforecast();
+  //   }
+  // }
 
+  componentDidMount() {
+    this.onSearchSubmit("tehran");
+  }
   // fetch current weather data function
 
   fetchCurrentWeather = async () => {

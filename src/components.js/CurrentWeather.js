@@ -115,14 +115,6 @@ class CurrentWeather extends Component {
                   />
                 </span>
               </div>
-              <div className="d-flex">
-                <span className="text-light text-capitalize d-inline-block col-6 p-0">
-                  {`sunrise ${convertToTime(sys.sunrise)}`}
-                </span>
-                <span className="text-light text-capitalize d-inline-block col-6 p-0">
-                  {`sunset  ${convertToTime(sys.sunset)}`}
-                </span>
-              </div>
             </div>
           </div>
           <div className="col-3 p-1 d-flex flex-column justify-content-start">
